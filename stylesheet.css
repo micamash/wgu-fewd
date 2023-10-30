@@ -82,27 +82,27 @@ header h1 {
 }
 
 #stl-banner {
-    background-image: url(../images/st-louis.jpg);
+    background-image: url(./images/st-louis.jpg);
     background-position: 50% 50%;
 }
 
 #jef-city-banner {
-    background-image: url(../images/jefferson-city.jpg);
+    background-image: url(./images/jefferson-city.jpg);
     background-position: 50% 80%;
 }
 
 #branson-banner {
-    background-image: url(../images/branson.jpg);
+    background-image: url(./images/branson.jpg);
     background-position: 50% 30%;
 }
 
 #missouri-banner {
-    background-image: url(../images/busch-stadium.jpg);
+    background-image: url(./images/busch-stadium.jpg);
     background-position: 50% 20%;
 }
 
 #contact-banner {
-    background-image: url(../images/mo-cave.jpg);
+    background-image: url(./images/mo-cave.jpg);
     background-position: 50% 30%;
 }
 
