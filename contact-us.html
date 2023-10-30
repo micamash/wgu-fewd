@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheet.css">
+    <title>Contact Us</title>
+</head>
+
+<body>
+    <div class="banner" id="contact-banner"></div>
+    <nav class="nav-bar">
+        <ul class="nav-list">
+            <li><a href="missouri-home-page.html">Home</a></li>
+            <li><a href="jefferson-city-capital.html">Jefferson City, MO</a></li>
+            <li><a href="st.louis.html">St. Louis, MO</a></li>
+            <li><a href="branson.html">Branson, MO</a></li>
+            <li><a href="contact-us.html">Contact Us</a></li>
+        </ul>
+    </nav>
+    <section>
+        <header>
+            <h1>Contact us!</h1>
+        </header>
+        <form action="#" target="_blank" method="GET">
+            <fieldset>
+                <p>
+                    <label for="first">First name:</label>
+                    <input type="text" id="first" name="first" placeholder="First Name...">
+                </p>
+                <p>
+                    <label for="last">Last name:</label>
+                    <input type="text" id="last" name="last" placeholder="Last Name...">
+                </p>
+                <p>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Email...">
+                </p>
+                <p>
+                    <label for="email-confirm" id="confirm-email-label">Confirm Email:</label>
+                    <input type="email" id="email-confirm" name="email-confirm" placeholder="Confirm Email...">
+                    <span id="mismatchEmail"></span>
+                </p>
+                <p>
+                <p><label for="question">Question:</label></p>
+                <textarea id="question" name="question" placeholder="Have a question?" rows="6" cols="50"></textarea>
+                </p>
+                <p>
+                    <input type="submit" value="Submit">
+                </p>
+            </fieldset>
+        </form>
+        <img src="images/missouri-license-plate.jpg" alt="Missouri license plate" class="site-img" id="plate-img">
+    </section>
+    <aside>
+        <p>Top state attractions from <a href="https://www.tripadvisor.com/" alt="" target="_blank">TripAdvisor</a>:</p>
+        <ol>
+            <li><a href="https://www.tripadvisor.com/Attraction_Review-g44160-d653837-Reviews-The_Haygoods-Branson_Missouri.html"
+                    target="_blank">The
+                    Haygoods</a></li>
+            <li><a href="https://www.tripadvisor.com/Attraction_Review-g44160-d1070936-Reviews-Sight_Sound_Theatres-Branson_Missouri.html"
+                    target="_blank">Sight
+                    & Sound Theatres</a></li>
+            <li><a href="https://www.tripadvisor.com/Attraction_Review-g44881-d104318-Reviews-The_Gateway_Arch-Saint_Louis_Missouri.html"
+                    target="_blank">The
+                    Gateway Arch</a></li>
+            <li><a href="https://www.tripadvisor.com/Attraction_Review-g44535-d266888-Reviews-National_WWI_Museum_and_Memorial-Kansas_City_Missouri.html"
+                    target="_blank">National WWI Museum and Memorial</a></li>
+            <li><a href="https://www.tripadvisor.com/Attraction_Review-g44160-d598555-Reviews-Titanic_Museum-Branson_Missouri.html"
+                    target="_blank">Titanic
+                    Museum</a></li>
+        </ol>
+    </aside>
+
+    <img src="images/blues-circle.jpg" alt="Blues hockey logo" class="site-img badge">
+    <img src="images/missouri-state-seal.png" alt="Missouri state seal" class="site-img" id="state-seal">
+
+    <script>
+        const email1 = document.getElementById("email");
+        const email2 = document.getElementById("email-confirm");
+        const emailMismatchSpan = document.getElementById("mismatchEmail");
+
+        email1.addEventListener("input", validateEmail);
+        email2.addEventListener("input", validateEmail);
+
+        function validateEmail() {
+            const email1Value = email1.value;
+            const email2Value = email2.value;
+
+            if (email1Value === email2Value) {
+                emailMismatchSpan.style.display = "none";
+            } else {
+                emailMismatchSpan.style.display = "block";
+                emailMismatchSpan.textContent = "Email addresses do not match!";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
